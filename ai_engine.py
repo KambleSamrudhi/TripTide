@@ -21,7 +21,7 @@ def has_internet():
 # GROQ AI (PRIMARY)
 # ==========================================================
 
-GROQ_KEY = os.getenv("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", "")
+GROQ_KEY = os.getenv("API KEY", "")
 
 def groq_ai(prompt):
     if GROQ_KEY == "":
