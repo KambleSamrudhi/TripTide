@@ -1,0 +1,6 @@
+{
+  "default_climate": "tropical",
+  "fallback_temp": 28,
+  "fallback_condition": "Partly Cloudy",
+  "note": "Used when the API is offline."
+}

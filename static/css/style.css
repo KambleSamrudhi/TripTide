@@ -1,0 +1,60 @@
+/* Hide horizontal scrollbar for onboarding */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+  border: 1px solid #f0f0f0;
+}
+
+.tag {
+  background: #196561;
+  color: #ffffff;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+}
+
+.section-title {
+  color: #132473;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.filter-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+}
+
+.filter-chip {
+    padding: 8px 18px;
+    border-radius: 25px;
+    border: 2px solid #C4D4E3;
+    background: white;
+    color: #0A3250;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.25s ease;
+}
+
+.filter-chip:hover {
+    background: #E6F5F1;
+}
+
+.filter-chip.active {
+    background: #196561;
+    color: white;
+    border-color: #196561;
+}
+#leaflet_map {
+        height: 300px !important;
+        width: 100%;
+        border-radius: 12px;
+    }

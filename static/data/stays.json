@@ -1,0 +1,531 @@
+{
+  "Goa": [
+    {
+      "name": "Seabreeze Resort",
+      "price": "₹3,200",
+      "numeric_price": 3200,
+      "rating": 4.3,
+      "type": "budget",
+      "amenities": ["wifi", "ac", "breakfast"],
+      "image": "https://images.unsplash.com/photo-1631610726571-966b67a969c9?q=80&w=1121&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "A peaceful budget-friendly stay near Candolim."
+    },
+    {
+      "name": "Taj Exotica Goa",
+      "price": "₹14,500",
+      "numeric_price": 14500,
+      "rating": 4.8,
+      "type": "luxury",
+      "amenities": ["wifi", "pool", "ac", "breakfast"],
+      "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
+      "description": "Premium luxury beachfront resort."
+    },
+    {
+      "name": "Goa Beach Hostel",
+      "price": "₹900",
+      "numeric_price": 900,
+      "rating": 4.2,
+      "type": "solo",
+      "amenities": ["wifi", "ac"],
+      "image": "https://plus.unsplash.com/premium_photo-1724818361335-291394c25925?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Z29hJTIwYmVhY2glMjBob3RlbHxlbnwwfHwwfHx8MA%3D%3D",
+      "description": "A lively hostel perfect for solo travellers."
+    },
+    {
+      "name": "Lotus Lagoon Villa",
+      "price": "₹6,800",
+      "numeric_price": 6800,
+      "rating": 4.5,
+      "type": "family",
+      "amenities": ["wifi", "pool", "ac"],
+      "image": "https://images.unsplash.com/photo-1705159798055-aa4a82d643c2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGxvdHVzJTIwbGFnb29uJTIwdmlsbGF8ZW58MHx8MHx8fDA%3D",
+      "description": "Private villa stay with lagoon view."
+    },
+    {
+      "name": "Ola Heritage Inn",
+      "price": "₹4,100",
+      "numeric_price": 4100,
+      "rating": 4.1,
+      "type": "budget",
+      "amenities": ["wifi", "breakfast"],
+      "image": "https://images.unsplash.com/photo-1727945573876-b2a57502906b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fG9sYSUyMGhlcml0YWdlJTIwaW5ufGVufDB8fDB8fHww",
+      "description": "Old Portuguese-style heritage inn."
+    }
+  ],
+
+  "Jaipur": [
+    {
+      "name": "Amber Palace Stay",
+      "price": "₹2,400",
+      "numeric_price": 2400,
+      "rating": 4.0,
+      "type": "budget",
+      "amenities": ["wifi"],
+      "image": "https://plus.unsplash.com/premium_photo-1693493439417-d332e618e640?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGFtYmVyJTIwcGFsYWNlJTIwc3RheXxlbnwwfHwwfHx8MA%3D%3D",
+      "description": "Budget stay close to Amber Fort."
+    },
+    {
+      "name": "Rambagh Palace",
+      "price": "₹25,000",
+      "numeric_price": 25000,
+      "rating": 4.9,
+      "type": "luxury",
+      "amenities": ["wifi", "pool", "ac", "breakfast"],
+      "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
+      "description": "Iconic luxury palace hotel."
+    },
+    {
+      "name": "Pink Hostel",
+      "price": "₹700",
+      "numeric_price": 700,
+      "rating": 4.1,
+      "type": "solo",
+      "amenities": ["wifi"],
+      "image": "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=1200&q=80",
+      "description": "Solo-friendly backpacker hostel."
+    },
+    {
+      "name": "Hawa Mahal Suites",
+      "price": "₹5,500",
+      "numeric_price": 5500,
+      "rating": 4.4,
+      "type": "family",
+      "amenities": ["wifi", "ac"],
+      "image": "https://images.unsplash.com/photo-1677021016089-69c0f3ea9644?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aGF3YSUyMG1haGFsJTIwc3VpdGVzfGVufDB8fDB8fHww",
+      "description": "Spacious family suites with city view."
+    },
+    {
+      "name": "Royal Desert Resort",
+      "price": "₹8,800",
+      "numeric_price": 8800,
+      "rating": 4.6,
+      "type": "luxury",
+      "amenities": ["wifi", "pool"],
+      "image": "https://images.unsplash.com/photo-1625315271865-2e10ef879e1a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cm95YWwlMjBkZXNlcnQlMjByZXNvcnR8ZW58MHx8MHx8fDA%3D",
+      "description": "Premium desert camp experience."
+    }
+  ],
+
+  "Kerala": [
+    {
+      "name": "Backwater Breeze",
+      "price": "₹3,800",
+      "numeric_price": 3800,
+      "rating": 4.3,
+      "type": "family",
+      "amenities": ["wifi", "breakfast"],
+      "image": "https://images.unsplash.com/photo-1587606729632-3cbe7fd55d42?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YmFja3dhdGVyJTIwYnJlZXplJTIwcmVzb3J0fGVufDB8fDB8fHww",
+      "description": "Backwater view cottage."
+    },
+    {
+      "name": "Kumarakom Houseboat",
+      "price": "₹12,000",
+      "numeric_price": 12000,
+      "rating": 4.7,
+      "type": "luxury",
+      "amenities": ["wifi", "breakfast"],
+      "image": "https://plus.unsplash.com/premium_photo-1697729432049-caca66a1dab6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGhvdXNlYm9hdHxlbnwwfHwwfHx8MA%3D%3D",
+      "description": "Luxury houseboat cruise."
+    },
+    {
+      "name": "Munnar Hills Hostel",
+      "price": "₹950",
+      "numeric_price": 950,
+      "rating": 4.2,
+      "type": "solo",
+      "amenities": ["wifi"],
+      "image": "https://images.unsplash.com/photo-1576651997751-8313f097ef9f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fGhvdXNpbmclMjBoaWxsfGVufDB8fDB8fHww",
+      "description": "Hostel stay amidst tea plantations."
+    },
+    {
+      "name": "Palm Shore Resort",
+      "price": "₹5,300",
+      "numeric_price": 5300,
+      "rating": 4.4,
+      "type": "family",
+      "amenities": ["wifi", "pool", "ac"],
+      "image": "https://images.unsplash.com/photo-1552873547-b88e7b2760e2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGFsbSUyMHNob3JlJTIwcmVzb3J0fGVufDB8fDB8fHww",
+      "description": "Beachside family stay."
+    },
+    {
+      "name": "Varkala Cliff Retreat",
+      "price": "₹7,000",
+      "numeric_price": 7000,
+      "rating": 4.6,
+      "type": "luxury",
+      "amenities": ["wifi", "ac"],
+      "image": "https://images.unsplash.com/photo-1669202744504-659787d07eed?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODR8fHBhbG0lMjBzaG9yZSUyMHJlc29ydHxlbnwwfHwwfHx8MA%3D%3D",
+      "description": "Luxury cliffside retreat."
+    }
+  ],
+
+  "Mumbai": [
+    {
+      "name": "Gateway Inn",
+      "price": "₹3,500",
+      "numeric_price": 3500,
+      "rating": 4.2,
+      "type": "budget",
+      "amenities": ["wifi", "ac"],
+      "image": "https://images.unsplash.com/photo-1496417263034-38ec4f0b665a?auto=format&fit=crop&w=1200&q=80",
+      "description": "Stay near Gateway of India."
+    },
+    {
+      "name": "The Oberoi Mumbai",
+      "price": "₹18,000",
+      "numeric_price": 18000,
+      "rating": 4.8,
+      "type": "luxury",
+      "amenities": ["wifi", "pool", "breakfast"],
+      "image": "https://images.unsplash.com/photo-1709187516056-d4929b67e89f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8b2Jlcm9pJTIwbXVtYmFpfGVufDB8fDB8fHww",
+      "description": "World-class luxury stay."
+    },
+    {
+      "name": "Bandra Backpackers",
+      "price": "₹850",
+      "numeric_price": 850,
+      "rating": 4.1,
+      "type": "solo",
+      "amenities": ["wifi"],
+      "image": "https://images.unsplash.com/photo-1752915570812-ddf0530f458d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDl8fGJhbmRyYSUyMGJhY2twYWtlcnMlMjBob3RlbHxlbnwwfHwwfHx8MA%3D%3D",
+      "description": "Trendy backpacker hostel."
+    },
+    {
+      "name": "Marine Drive Suites",
+      "price": "₹7,500",
+      "numeric_price": 7500,
+      "rating": 4.5,
+      "type": "family",
+      "amenities": ["wifi", "ac"],
+      "image": "https://images.unsplash.com/photo-1751105723946-d370b762219a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTAxfHxtYXJpbmUlMjBkcml2ZXxlbnwwfHwwfHx8MA%3D%3D",
+      "description": "Family suites with sea view."
+    },
+    {
+      "name": "Mumbai Skyline Hotel",
+      "price": "₹9,800",
+      "numeric_price": 9800,
+      "rating": 4.7,
+      "type": "luxury",
+      "amenities": ["wifi", "pool"],
+      "image": "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1200&q=80",
+      "description": "High-rise luxury stay."
+    }
+  ],
+
+  "Ladakh": [
+    {
+      "name": "Leh View Hostel",
+      "price": "₹700",
+      "numeric_price": 700,
+      "rating": 4.0,
+      "type": "solo",
+      "amenities": ["wifi"],
+      "image": "https://images.unsplash.com/photo-1664908725508-3e46b90886b1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bGVoJTIwdmlldyUyMGhvc3RlbHxlbnwwfHwwfHx8MA%3D%3D",
+      "description": "Affordable stay with mountain views."
+    },
+    {
+      "name": "Pangong Retreat",
+      "price": "₹5,600",
+      "numeric_price": 5600,
+      "rating": 4.5,
+      "type": "family",
+      "amenities": ["wifi", "breakfast"],
+      "image": "https://images.unsplash.com/photo-1664623105789-9dca8b27035d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzd8fGxlaCUyMHZpZXclMjBob3N0ZWx8ZW58MHx8MHx8fDA%3D",
+      "description": "Camp stay near Pangong Lake."
+    },
+    {
+      "name": "Nubra Valley Resort",
+      "price": "₹9,200",
+      "numeric_price": 9200,
+      "rating": 4.7,
+      "type": "luxury",
+      "amenities": ["wifi"],
+      "image": "https://images.unsplash.com/photo-1751486877474-a58e3390d398?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTh8fGxlaCUyMHZpZXclMjBob3N0ZWx8ZW58MHx8MHx8fDA%3D",
+      "description": "Premium desert stay."
+    },
+    {
+      "name": "Leh Heritage Hotel",
+      "price": "₹3,400",
+      "numeric_price": 3400,
+      "rating": 4.2,
+      "type": "budget",
+      "amenities": ["wifi"],
+      "image": "https://images.unsplash.com/photo-1638830256202-31085e62944a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjF8fGxlaCUyMHZpZXclMjBob3N0ZWx8ZW58MHx8MHx8fDA%3D",
+      "description": "Heritage-style stay in old Leh town."
+    },
+    {
+      "name": "Snow Peak Resort",
+      "price": "₹6,800",
+      "numeric_price": 6800,
+      "rating": 4.4,
+      "type": "family",
+      "amenities": ["wifi", "breakfast"],
+      "image": "https://images.unsplash.com/photo-1718307776863-3571e8d6161c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8c25vdyUyMHBlYWslMjBob3RlbHxlbnwwfHwwfHx8MA%3D%3D",
+      "description": "Family-friendly mountain stay."
+    }
+  ],
+
+  "Paris": [
+    {
+      "name": "Paris Boutique Hotel",
+      "price": "$120",
+      "numeric_price": 120,
+      "rating": 4.4,
+      "type": "luxury",
+      "amenities": ["wifi", "breakfast"],
+      "image": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1200&q=80",
+      "description": "Charming Parisian boutique stay."
+    },
+    {
+      "name": "Eiffel View Suites",
+      "price": "$180",
+      "numeric_price": 180,
+      "rating": 4.8,
+      "type": "luxury",
+      "amenities": ["wifi", "ac"],
+      "image": "https://images.unsplash.com/photo-1726345229013-92d2277b34bc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fGVpZmVsJTIwdmlldyUyMHN1aXRlfGVufDB8fDB8fHww",
+      "description": "Suites with Eiffel Tower view."
+    },
+    {
+      "name": "Paris Hostel Central",
+      "price": "$35",
+      "numeric_price": 35,
+      "rating": 4.0,
+      "type": "solo",
+      "amenities": ["wifi"],
+      "image": "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=80",
+      "description": "Affordable stay in central Paris."
+    },
+    {
+      "name": "Le Family Stay",
+      "price": "$90",
+      "numeric_price": 90,
+      "rating": 4.2,
+      "type": "family",
+      "amenities": ["wifi", "breakfast"],
+      "image": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1200&q=80",
+      "description": "Cozy stay for families."
+    },
+    {
+      "name": "Montmartre Retreat",
+      "price": "$140",
+      "numeric_price": 140,
+      "rating": 4.6,
+      "type": "luxury",
+      "amenities": ["wifi"],
+      "image": "https://images.unsplash.com/photo-1545721264-d2ee31c813f2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8TW9udG1hcnRyZSUyMFJldHJlYXR8ZW58MHx8MHx8fDA%3D",
+      "description": "Artist district premium stay."
+    }
+  ],
+
+  "Tokyo": [
+    {
+      "name": "Shinjuku Capsule Stay",
+      "price": "$40",
+      "numeric_price": 40,
+      "rating": 4.3,
+      "type": "solo",
+      "amenities": ["wifi", "ac"],
+      "image": "https://images.unsplash.com/photo-1539606420556-14c457c45507?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2Fwc3VsZSUyMGhvdGVsfGVufDB8fDB8fHww",
+      "description": "Capsule hotel in Shinjuku."
+    },
+    {
+      "name": "Tokyo Grand Hotel",
+      "price": "$190",
+      "numeric_price": 190,
+      "rating": 4.7,
+      "type": "luxury",
+      "amenities": ["wifi", "pool"],
+      "image": "https://images.unsplash.com/photo-1531068916221-a380a3e2d115?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dG9reW8lMjBob3RlbHxlbnwwfHwwfHx8MA%3D%3D",
+      "description": "Luxury stay in Tokyo Bay."
+    },
+    {
+      "name": "Asakusa Family Inn",
+      "price": "$80",
+      "numeric_price": 80,
+      "rating": 4.2,
+      "type": "family",
+      "amenities": ["wifi"],
+      "image": "https://plus.unsplash.com/premium_photo-1661846577575-560fd37a2a19?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHRva3lvJTIwaG90ZWx8ZW58MHx8MHx8fDA%3D",
+      "description": "Perfect for families exploring temples."
+    },
+    {
+      "name": "Akihabara Tech Hostel",
+      "price": "$30",
+      "numeric_price": 30,
+      "rating": 4.1,
+      "type": "solo",
+      "amenities": ["wifi"],
+      "image": "https://images.unsplash.com/photo-1562407717-bbc68bc7a4bf?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTN8fHRva3lvJTIwaG90ZWx8ZW58MHx8MHx8fDA%3D",
+      "description": "Hostel for anime & gaming lovers."
+    },
+    {
+      "name": "Skyline Tower Suites",
+      "price": "$150",
+      "numeric_price": 150,
+      "rating": 4.5,
+      "type": "luxury",
+      "amenities": ["wifi", "ac"],
+      "image": "https://plus.unsplash.com/premium_photo-1742479204017-aa8a41ca6f23?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8c2t5bGluZSUyMHRvd2VyfGVufDB8fDB8fHww",
+      "description": "High-rise suites with skyline views."
+    }
+  ],
+
+  "Dubai": [
+    {
+      "name": "Dubai Creek Hostel",
+      "price": "$25",
+      "numeric_price": 25,
+      "rating": 4.0,
+      "type": "solo",
+      "amenities": ["wifi"],
+      "image": "https://images.unsplash.com/photo-1678912128919-b69e9e855c00?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZHViYWklMjBjcmVlayUyMGhvdGVsfGVufDB8fDB8fHww",
+      "description": "Affordable stay near Dubai Creek."
+    },
+    {
+      "name": "Palm Dubai Resort",
+      "price": "$220",
+      "numeric_price": 220,
+      "rating": 4.8,
+      "type": "luxury",
+      "amenities": ["wifi", "pool", "breakfast"],
+      "image": "https://images.unsplash.com/photo-1719960626127-c7f657944bc6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8cGFsbSUyMGhvdGVsJTIwZHViYWl8ZW58MHx8MHx8fDA%3D",
+      "description": "Premium resort on Palm Jumeirah."
+    },
+    {
+      "name": "Bur Dubai Family Suites",
+      "price": "$95",
+      "numeric_price": 95,
+      "rating": 4.3,
+      "type": "family",
+      "amenities": ["wifi", "ac"],
+      "image": "https://images.unsplash.com/photo-1732347210962-c37cb67aabb2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZmFtaWx5JTIwc3VpdGVzJTIwaG90ZWxzfGVufDB8fDB8fHww",
+      "description": "Family-friendly suites near metro."
+    },
+    {
+      "name": "Desert Luxury Camp",
+      "price": "$160",
+      "numeric_price": 160,
+      "rating": 4.6,
+      "type": "luxury",
+      "amenities": ["wifi"],
+      "image": "https://images.unsplash.com/photo-1677836157562-5e24481b6b69?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZGVzZXJ0JTIwY2FtcHxlbnwwfHwwfHx8MA%3D%3D",
+      "description": "Luxury desert camp under the stars."
+    },
+    {
+      "name": "Dubai Marina Hotel",
+      "price": "$130",
+      "numeric_price": 130,
+      "rating": 4.5,
+      "type": "luxury",
+      "amenities": ["wifi", "ac"],
+      "image": "https://images.unsplash.com/photo-1718564891474-1fd9c203378c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fG1hcmluZSUyMGhvdGVsJTIwZHViYWl8ZW58MHx8MHx8fDA%3D",
+      "description": "Hotel with marina view."
+    }
+  ],
+
+  "Singapore": [
+    {
+      "name": "Little India Hostel",
+      "price": "$28",
+      "numeric_price": 28,
+      "rating": 4.0,
+      "type": "solo",
+      "amenities": ["wifi"],
+      "image": "https://images.unsplash.com/photo-1694307771413-ab92ba77539b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fGxpdHRsZSUyMGluZGlhJTIwaG9zdGVsfGVufDB8fDB8fHww",
+      "description": "Budget hostel in Little India."
+    },
+    {
+      "name": "Marina Bay Sands",
+      "price": "$300",
+      "numeric_price": 300,
+      "rating": 4.9,
+      "type": "luxury",
+      "amenities": ["wifi", "pool", "ac"],
+      "image": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1200&q=80",
+      "description": "Iconic luxury stay with infinity pool."
+    },
+    {
+      "name": "Orchard Family Hotel",
+      "price": "$110",
+      "numeric_price": 110,
+      "rating": 4.3,
+      "type": "family",
+      "amenities": ["wifi", "breakfast"],
+      "image": "https://images.unsplash.com/photo-1711477607500-ea8b9ef58e04?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8b3JjaGFkJTIwZmFtaWx5JTIwaG90ZWx8ZW58MHx8MHx8fDA%3D",
+      "description": "Family hotel in Orchard Road."
+    },
+    {
+      "name": "Chinatown Cozy Stay",
+      "price": "$85",
+      "numeric_price": 85,
+      "rating": 4.2,
+      "type": "budget",
+      "amenities": ["wifi"],
+      "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
+      "description": "Chinese heritage-style stay."
+    },
+    {
+      "name": "Sentosa Resort",
+      "price": "$160",
+      "numeric_price": 160,
+      "rating": 4.6,
+      "type": "luxury",
+      "amenities": ["wifi", "pool"],
+      "image": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80",
+      "description": "Tropical resort on Sentosa Island."
+    }
+  ],
+
+  "Bali": [
+    {
+      "name": "Bali Surf Hostel",
+      "price": "$18",
+      "numeric_price": 18,
+      "rating": 4.1,
+      "type": "solo",
+      "amenities": ["wifi"],
+      "image": "https://images.unsplash.com/photo-1543783207-ec64e4d95325?auto=format&fit=crop&w=1200&q=80",
+      "description": "Beachfront hostel for surfers."
+    },
+    {
+      "name": "Ubud Jungle Retreat",
+      "price": "$140",
+      "numeric_price": 140,
+      "rating": 4.7,
+      "type": "luxury",
+      "amenities": ["wifi", "pool", "breakfast"],
+      "image": "https://images.unsplash.com/photo-1760067537116-de1f76fe8f95?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8anVuZ2xlJTIwcmV0cmVhdCUyMHJlc29ydHxlbnwwfHwwfHx8MA%3D%3D",
+      "description": "Luxury villas in the jungle."
+    },
+    {
+      "name": "Nusa Family Stay",
+      "price": "$60",
+      "numeric_price": 60,
+      "rating": 4.2,
+      "type": "family",
+      "amenities": ["wifi"],
+      "image": "https://plus.unsplash.com/premium_photo-1664303908759-6d375aefbcd7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8anVuZ2xlJTIwcmV0cmVhdCUyMHJlc29ydHxlbnwwfHwwfHx8MA%3D%3D",
+      "description": "Family stay near Nusa Dua."
+    },
+    {
+      "name": "Canggu Boutique Hotel",
+      "price": "$95",
+      "numeric_price": 95,
+      "rating": 4.5,
+      "type": "luxury",
+      "amenities": ["wifi", "ac"],
+      "image": "https://plus.unsplash.com/premium_photo-1675745329954-9639d3b74bbf?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Ym91dGlxdWUlMjBob3RlbHxlbnwwfHwwfHx8MA%3D%3D",
+      "description": "Trendy hotel in Canggu."
+    },
+    {
+      "name": "Kuta Sunset Hotel",
+      "price": "$45",
+      "numeric_price": 45,
+      "rating": 4.0,
+      "type": "budget",
+      "amenities": ["wifi"],
+      "image": "https://images.unsplash.com/photo-1469796466635-455ede028aca?auto=format&fit=crop&w=1200&q=80",
+      "description": "Budget hotel near Kuta Beach."
+    }
+  ]
+}

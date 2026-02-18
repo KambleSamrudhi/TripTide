@@ -1,0 +1,187 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="p-6 space-y-8">
+
+    <h1 class="text-3xl font-bold text-[#132473]">Admin Dashboard</h1>
+
+    <!-- METRIC CARDS -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+
+        <div class="p-4 bg-white rounded-lg shadow">
+            <p class="text-gray-600 text-sm">SUS</p>
+            <p id="susValue" class="text-3xl font-bold">0</p>
+        </div>
+
+        <div class="p-4 bg-white rounded-lg shadow">
+            <p class="text-gray-600 text-sm">NPS</p>
+            <p id="npsValue" class="text-3xl font-bold">0</p>
+        </div>
+
+        <div class="p-4 bg-white rounded-lg shadow">
+            <p class="text-gray-600 text-sm">TSR</p>
+            <p id="tsrValue" class="text-3xl font-bold">0%</p>
+        </div>
+
+        <div class="p-4 bg-white rounded-lg shadow">
+            <p class="text-gray-600 text-sm">UER</p>
+            <p id="uerValue" class="text-3xl font-bold">0%</p>
+        </div>
+
+        <div class="p-4 bg-white rounded-lg shadow">
+            <p class="text-gray-600 text-sm">Engagement</p>
+            <p id="engageValue" class="text-3xl font-bold">0</p>
+        </div>
+
+        <div class="p-4 bg-white rounded-lg shadow">
+            <p class="text-gray-600 text-sm">Retention</p>
+            <p id="retentionValue" class="text-3xl font-bold">0%</p>
+        </div>
+
+    </div>
+
+    <!-- CHARTS -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+        <div class="bg-white p-4 rounded-lg shadow">
+            <h2 class="font-semibold mb-2">AI Usage</h2>
+            <canvas id="aiChart"></canvas>
+        </div>
+
+        <div class="bg-white p-4 rounded-lg shadow">
+            <h2 class="font-semibold mb-2">Clicks</h2>
+            <canvas id="clickChart"></canvas>
+        </div>
+
+        <div class="bg-white p-4 rounded-lg shadow">
+            <h2 class="font-semibold mb-2">Page Visits</h2>
+            <canvas id="visitsChart"></canvas>
+        </div>
+
+        <div class="bg-white p-4 rounded-lg shadow">
+            <h2 class="font-semibold mb-2">Load Times</h2>
+            <canvas id="loadChart"></canvas>
+        </div>
+
+        <div class="bg-white p-4 rounded-lg shadow">
+            <h2 class="font-semibold mb-2">Scroll Depth</h2>
+            <canvas id="scrollChart"></canvas>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    function loadMetrics() {
+        fetch("/api/admin/metrics")
+            .then(res => res.json())
+            .then(data => {
+                console.log("Admin Metrics:", data);
+
+                // ---- METRIC CARDS ----
+                document.getElementById("susValue").innerText = data.sus ?? "0";
+                document.getElementById("npsValue").innerText = data.nps ?? "0";
+                document.getElementById("tsrValue").innerText = (data.tsr ?? 0) + "%";
+                document.getElementById("uerValue").innerText = (data.uer ?? 0) + "%";
+                document.getElementById("engageValue").innerText = data.engagement ?? "0";
+                document.getElementById("retentionValue").innerText = (data.retention ?? 0) + "%";
+
+                // ---------------------------
+                // DUMMY FALLBACK DATA
+                // ---------------------------
+                const dummyAI = { local: 12, online: 7 };
+                const dummyClicks = {
+                    "Search Button": 14,
+                    "Plan Trip": 9,
+                    "Explore Destination": 6,
+                    "AI Chat": 11
+                };
+
+                const aiUsage = Object.keys(data.ai_usage ?? {}).length
+                                ? data.ai_usage
+                                : dummyAI;
+
+                const clickEvents = Object.keys(data.click_events ?? {}).length
+                                    ? data.click_events
+                                    : dummyClicks;
+
+                // ---------------- AI Usage Chart ----------------
+                new Chart(aiChart, {
+                    type: "bar",
+                    data: {
+                        labels: Object.keys(aiUsage),
+                        datasets: [{
+                            label: "AI Interactions",
+                            data: Object.values(aiUsage),
+                            backgroundColor: ["#196561", "#4f46e5"]
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        plugins: { legend: { display: false } }
+                    }
+                });
+
+                // ---------------- Click Events Chart ----------------
+                new Chart(clickChart, {
+                    type: "pie",
+                    data: {
+                        labels: Object.keys(clickEvents),
+                        datasets: [{
+                            data: Object.values(clickEvents),
+                            backgroundColor: ["#196561", "#facc15", "#ef4444", "#3b82f6"]
+                        }]
+                    },
+                    options: { responsive: true }
+                });
+
+                // ---------------- Page Visits Chart ----------------
+                new Chart(visitsChart, {
+                    type: "bar",
+                    data: {
+                        labels: Object.keys(data.page_visits ?? {}),
+                        datasets: [{
+                            data: Object.values(data.page_visits ?? {}),
+                            backgroundColor: "#196561"
+                        }]
+                    }
+                });
+
+                // ---------------- Load Times Chart ----------------
+                new Chart(loadChart, {
+                    type: "bar",
+                    data: {
+                        labels: Object.keys(data.page_load_times ?? {}),
+                        datasets: [{
+                            data: Object.values(data.page_load_times ?? {}),
+                            backgroundColor: "#4f46e5"
+                        }]
+                    }
+                });
+
+                // ---------------- Scroll Depth Chart ----------------
+                new Chart(scrollChart, {
+                    type: "bar",
+                    data: {
+                        labels: Object.keys(data.scroll_depth ?? {}),
+                        datasets: [{
+                            data: Object.values(data.scroll_depth ?? {}),
+                            backgroundColor: "#f97316"
+                        }]
+                    }
+                });
+
+            })
+            .catch(err => console.error("Error loading metrics:", err));
+    }
+
+    loadMetrics();
+});
+</script>
+
+{% endblock %}

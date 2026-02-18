@@ -1,0 +1,26 @@
+[
+  {
+    "destination": "Goa",
+    "name": "Street Food Trail",
+    "price": "₹450",
+    "duration": "2 hours",
+    "image": "https://images.unsplash.com/photo-1498654896293-37aacf113fd9",
+    "description": "Experience authentic Goan street cuisine with local guides."
+  },
+  {
+    "destination": "Kyoto",
+    "name": "Cultural Night Festival",
+    "price": "Free",
+    "duration": "3 hours",
+    "image": "https://images.unsplash.com/photo-1512427691650-1f2c6e3bfa11",
+    "description": "Traditional dance, music, and street celebrations."
+  },
+  {
+    "destination": "Bali",
+    "name": "Heritage Walking Tour",
+    "price": "₹700",
+    "duration": "1.5 hours",
+    "image": "https://images.unsplash.com/photo-1500534623283-312aade485b7",
+    "description": "Explore historic temples and ancient sites with a guide."
+  }
+]

@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="p-6">
+
+    <h1 class="text-3xl font-bold text-[#132473] mb-4">Explore Stays</h1>
+
+    <!-- Hidden filter values -->
+    <input type="hidden" id="exp_price" value="all">
+    <input type="hidden" id="exp_rating" value="all">
+    <input type="hidden" id="exp_type" value="all">
+    <input type="hidden" id="exp_amenity" value="all">
+    <input type="hidden" id="exp_sort" value="all">
+
+    <!-- FILTER CHIP ROW -->
+    <div class="filter-row">
+
+        <!-- PRICE -->
+        <div class="filter-chip" data-type="price" data-value="0-3000">Budget</div>
+        <div class="filter-chip" data-type="price" data-value="3000-6000">Mid Range</div>
+        <div class="filter-chip" data-type="price" data-value="6000-15000">Luxury</div>
+
+        <!-- RATING -->
+        <div class="filter-chip" data-type="rating" data-value="4">4★+</div>
+        <div class="filter-chip" data-type="rating" data-value="4.5">4.5★+</div>
+
+        <!-- AMENITIES -->
+        <div class="filter-chip" data-type="amenity" data-value="WiFi">Wi-Fi</div>
+        <div class="filter-chip" data-type="amenity" data-value="Desk">Work Desk</div>
+        <div class="filter-chip" data-type="amenity" data-value="Kitchen">Kitchen</div>
+
+        <!-- SORT -->
+        <div class="filter-chip" data-type="sort" data-value="price_low_high">₹ Low → High</div>
+        <div class="filter-chip" data-type="sort" data-value="price_high_low">₹ High → Low</div>
+        <div class="filter-chip" data-type="sort" data-value="rating_high_low">Rating High → Low</div>
+
+    </div>
+
+    <!-- STAY GRID -->
+    <div id="explore_grid"
+         class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6"></div>
+
+
+
+    <!-- EXPERIENCES -->
+    <h2 class="text-2xl font-bold text-[#132473] mt-12 mb-4">Local Experiences</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+        <div class="bg-white shadow p-4 rounded-xl">
+            <img src="/static/images/tea.avif" class="w-full h-40 object-cover rounded-lg">
+            <h3 class="font-bold text-xl mt-2">Tea Plantation Walk</h3>
+            <p class="text-gray-600">Munnar</p>
+        </div>
+
+        <div class="bg-white shadow p-4 rounded-xl">
+            <img src="/static/images/food.avif" class="w-full h-40 object-cover rounded-lg">
+            <h3 class="font-bold text-xl mt-2">Old Delhi Food Trail</h3>
+            <p class="text-gray-600">Delhi</p>
+        </div>
+
+        <div class="bg-white shadow p-4 rounded-xl">
+            <img src="/static/images/puppet.avif" class="w-full h-40 object-cover rounded-lg">
+            <h3 class="font-bold text-xl mt-2">Rajasthani Cultural Night</h3>
+            <p class="text-gray-600">Jaipur</p>
+        </div>
+
+        <div class="bg-white shadow p-4 rounded-xl">
+            <img src="/static/images/kayak.avif" class="w-full h-40 object-cover rounded-lg">
+            <h3 class="font-bold text-xl mt-2">Backwater Kayaking</h3>
+            <p class="text-gray-600">Alleppey</p>
+        </div>
+    </div>
+
+</div>
+
+<style>
+.filter-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+}
+
+.filter-chip {
+    padding: 8px 18px;
+    border-radius: 25px;
+    border: 2px solid #C4D4E3;
+    background: white;
+    color: #0A3250;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.25s;
+}
+
+.filter-chip:hover {
+    background: #E6F5F1;
+}
+
+.filter-chip.active {
+    background: #196561;
+    color: white;
+    border-color: #196561;
+}
+</style>
+
+<script src="/static/js/explore.js?v=3"></script>
+
+<script>
+document.querySelectorAll(".filter-chip").forEach(chip => {
+    chip.addEventListener("click", () => {
+
+        document
+            .querySelectorAll(`.filter-chip[data-type="${chip.dataset.type}"]`)
+            .forEach(c => c.classList.remove("active"));
+
+        chip.classList.add("active");
+
+        const input = document.getElementById(`exp_${chip.dataset.type}`);
+        input.value = chip.dataset.value;
+
+        applyExploreFilters();
+    });
+});
+</script>
+
+{% endblock %}

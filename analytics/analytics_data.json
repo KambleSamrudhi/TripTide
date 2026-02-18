@@ -1,0 +1,77 @@
+{
+    "metrics": {
+        "anonymous": {
+            "page_visits": {
+                "/journal": 2
+            },
+            "click_events": {},
+            "load_times": {
+                "/journal": [
+                    346,
+                    246
+                ],
+                "/": [
+                    501
+                ],
+                "/admin": [
+                    253,
+                    3047,
+                    213,
+                    602,
+                    213,
+                    804,
+                    841,
+                    207,
+                    878
+                ],
+                "/home": [
+                    384
+                ],
+                "/explore": [
+                    632
+                ],
+                "/planner": [
+                    310,
+                    191
+                ]
+            },
+            "scroll_depth": {
+                "/admin": [
+                    83,
+                    84,
+                    99,
+                    74,
+                    99,
+                    76,
+                    96,
+                    99,
+                    76,
+                    99,
+                    99,
+                    99,
+                    81,
+                    83,
+                    98
+                ],
+                "/journal": [
+                    82,
+                    83,
+                    98
+                ]
+            },
+            "ai_usage": {
+                "local": 0,
+                "online": 0
+            },
+            "tasks": {
+                "attempt": {},
+                "success": {},
+                "error": {},
+                "duration": {}
+            }
+        }
+    },
+    "sus_scores": [],
+    "nps_scores": [],
+    "ctr": {}
+}

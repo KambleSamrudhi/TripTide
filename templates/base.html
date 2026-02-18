@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Triptide</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+
+        @keyframes logoGlow {
+            0% { box-shadow: 0 0 10px rgba(25, 101, 97, 0.6),
+                         0 0 20px rgba(25, 101, 97, 0.4); }
+            50% { box-shadow: 0 0 20px rgba(25, 101, 97, 1),
+                          0 0 35px rgba(25, 101, 97, 0.8); }
+            100% { box-shadow: 0 0 10px rgba(25, 101, 97, 0.6),
+                           0 0 20px rgba(25, 101, 97, 0.4); }
+        }
+
+        .animate-logo-glow { animation: logoGlow 2.5s infinite ease-in-out; }
+
+        .custom-scroll { scrollbar-width: none; }
+        .custom-scroll::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+
+<body class="bg-white text-[#132473] relative min-h-screen">
+
+    <!-- ICONS -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="hidden">
+
+        <symbol id="home-icon" viewBox="0 0 24 24">
+            <path d="M3 12l9-9 9 9m-2 0v8a2 2 0 0 1-2 2h-3m-4 0H7a2 2 0 0 1-2-2v-8"
+                  stroke-width="2" stroke="currentColor" fill="none"/>
+        </symbol>
+
+        <symbol id="map-icon" viewBox="0 0 24 24">
+            <path d="M9 18l6-3 6 3V6l-6-3-6 3-6-3v12l6 3z"
+                  stroke-width="2" stroke="currentColor" fill="none"/>
+        </symbol>
+
+        <symbol id="calendar-icon" viewBox="0 0 24 24">
+            <path d="M3 8h18M21 6V5a2 2 0 0 0-2-2h-3V1m0 2v2m-4-2v2M3 6v12a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6"
+                  stroke-width="2" stroke="currentColor" fill="none"/>
+        </symbol>
+
+        <symbol id="shield-icon" viewBox="0 0 24 24">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
+                  stroke-width="2" stroke="currentColor" fill="none"/>
+        </symbol>
+
+        <symbol id="book-icon" viewBox="0 0 24 24">
+            <path d="M4 19h7m-7 0V6a2 2 0 0 1 2-2h5m7 15h-7m7 0V4a1 1 0 0 0-1-1h-6"
+                  stroke-width="2" stroke="currentColor" fill="none"/>
+        </symbol>
+
+    </svg>
+
+    <!-- MAIN CONTENT -->
+    <div class="pb-20">
+        {% block content %}{% endblock %}
+    </div>
+
+    <!-- Bottom Navigation -->
+    <nav class="fixed bottom-0 left-0 w-full bg-white border-t shadow-lg z-50">
+        <div class="grid grid-cols-5 text-center text-sm">
+
+            <a href="/home" class="py-3 flex flex-col items-center text-[#132473]">
+                <img src="/static/icons/home.svg" class="w-6 h-6 mb-1">
+                <span>Home</span>
+            </a>
+
+            <a href="/explore" class="py-3 flex flex-col items-center text-[#132473]">
+                <img src="/static/icons/search-location.svg" class="w-6 h-6 mb-1">
+                <span>Explore</span>
+            </a>
+
+            <a href="/planner" class="py-3 flex flex-col items-center text-[#132473]">
+                <img src="/static/icons/calendar-clock.svg" class="w-6 h-6 mb-1">
+                <span>Planner</span>
+            </a>
+
+            <a href="/safety" class="py-3 flex flex-col items-center text-[#132473]">
+                <img src="/static/icons/shield-check.svg" class="w-6 h-6 mb-1">
+                <span>Safety</span>
+            </a>
+
+            <a href="/journal" class="py-3 flex flex-col items-center text-[#132473]">
+                <img src="/static/icons/journal-alt.svg" class="w-6 h-6 mb-1">
+                <span>Journal</span>
+            </a>
+
+        </div>
+    </nav>
+
+    <!-- Floating Center Logo -->
+    <div id="floatingLogo" class="fixed bottom-20 left-1/2 -translate-x-1/2 z-50 transition-opacity duration-300">
+        <a href="/home">
+            <img src="/static/images/logo.png"
+                 class="w-20 h-20 rounded-full border-4 border-white bg-white shadow-2xl animate-logo-glow">
+        </a>
+    </div>
+
+    <!-- Analytics -->
+    <script src="/static/js/analytics.js"></script>
+
+    <!-- CACHE BUSTING -->
+    <script>
+        feather.replace();
+        document.querySelectorAll("script").forEach(s => {
+            if (!s.src.includes("v=")) {
+                s.src = s.src + "?v={{ timestamp }}";
+            }
+        });
+    </script>
+
+    <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+
+    <script>
+        window.addEventListener("load", function () {
+            try { feather.replace(); }
+            catch (e) { console.log("Feather error:", e); }
+        });
+    </script>
+
+    <script src="{{ url_for('static', filename='js/profile.js') }}"></script>
+
+    <!-- 🔥 Removed All SUS/NPS UI + Logic -->
+    <!-- Provide harmless dummy functions so nothing breaks -->
+    <script>
+        function openSusSurvey() {}
+        function openNpsSurvey() {}
+        function closeSurveyModal() {}
+        console.log("SUS/NPS disabled globally.");
+    </script>
+
+    <!-- Floating logo behavior -->
+    <script>
+    document.addEventListener("scroll", () => {
+        const logo = document.getElementById("floatingLogo");
+        const scrollPosition = window.innerHeight + window.scrollY;
+        const pageHeight = document.body.offsetHeight;
+
+        if (scrollPosition >= pageHeight - 150) {
+            logo.style.opacity = "0";
+            logo.style.pointerEvents = "none";
+        } else {
+            logo.style.opacity = "1";
+            logo.style.pointerEvents = "auto";
+        }
+    });
+    </script>
+
+</body>
+</html>

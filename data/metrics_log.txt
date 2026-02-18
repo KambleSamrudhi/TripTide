@@ -1,0 +1,4 @@
+# TripTide Metrics Log
+# Each entry will be appended by the backend in the format:
+# [timestamp] metric_name: value
+

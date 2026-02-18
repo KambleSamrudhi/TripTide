@@ -1,0 +1,17 @@
+{
+  "india": [
+    { "id": "goa", "name": "Goa", "country": "India", "image": "static/images/goa.jpg" },
+    { "id": "delhi", "name": "New Delhi", "country": "India", "image": "static/images/new_delhi.jpg" },
+    { "id": "mumbai", "name": "Mumbai", "country": "India", "image": "static/images/mumbai.jpg" },
+    { "id": "kerala", "name": "Kerala", "country": "India", "image": "static/images/kerala.jpg" },
+    { "id": "ladakh", "name": "Ladakh", "country": "India", "image": "static/images/ladakh.jpg" }
+  ],
+
+  "international": [
+    { "id": "paris", "name": "Paris", "country": "France", "image": "static/images/paris.jpg" },
+    { "id": "bali", "name": "Bali", "country": "Indonesia", "image": "static/images/bali.jpg" },
+    { "id": "tokyo", "name": "Tokyo", "country": "Japan", "image": "static/images/tokyo.jpg" },
+    { "id": "dubai", "name": "Dubai", "country": "UAE", "image": "static/images/dubai.jpg" },
+    { "id": "newyork", "name": "New York", "country": "USA", "image": "static/images/newyork.jpg" }
+  ]
+}

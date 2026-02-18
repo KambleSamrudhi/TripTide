@@ -1,0 +1,14 @@
+[
+  {
+    "destination": "Kyoto",
+    "title": "The Spirit of Kyoto",
+    "image": "https://images.unsplash.com/photo-1500534623283-312aade485b7",
+    "story": "Kyoto blends ancient temples, tea ceremonies, and timeless traditions..."
+  },
+  {
+    "destination": "Bali",
+    "title": "Harmony in Tradition",
+    "image": "https://images.unsplash.com/photo-1526779259212-939e64788e3c",
+    "story": "From its sacred temples to rich dance traditions, Bali embodies spiritual beauty..."
+  }
+]

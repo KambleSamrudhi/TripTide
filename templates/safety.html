@@ -1,0 +1,133 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1 class="text-2xl font-bold text-[#132473] mb-4">Safety Comes First</h1>
+
+<p class="text-gray-600 text-sm mb-6">
+    Real-time safety insights, emergency contacts, and gender-specific travel guidance.
+</p>
+
+
+<!-- SAFETY ALERT (Banner) -->
+<div class="rounded-xl overflow-hidden shadow-lg mb-8 bg-red-50 border border-red-300">
+    <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7"
+         class="w-full h-40 object-cover">
+
+    <div class="p-4">
+        <h2 class="font-bold text-lg text-red-700">Travel Advisory: Moderate Weather Warning</h2>
+        <p class="text-red-600 text-sm mt-1">
+            Expect mild rain & delays in outdoor activities today.
+        </p>
+    </div>
+</div>
+
+
+
+<!-- EMERGENCY CONTACTS -->
+<h2 class="text-lg font-semibold text-[#196561] mb-3">Emergency Contacts</h2>
+
+<div class="rounded-2xl shadow-lg p-4 bg-white mb-8">
+    <p class="text-[#132473] font-semibold">Police: <span class="font-normal text-gray-700">100</span></p>
+    <p class="text-[#132473] font-semibold mt-2">Ambulance: <span class="font-normal text-gray-700">102</span></p>
+    <p class="text-[#132473] font-semibold mt-2">Women Helpline: <span class="font-normal text-gray-700">1091</span></p>
+    <p class="text-[#132473] font-semibold mt-2">Tourist Support: <span class="font-normal text-gray-700">1363</span></p>
+</div>
+
+
+
+<!-- SAFETY TIPS -->
+<h2 class="text-lg font-semibold text-[#196561] mb-3">General Safety Tips</h2>
+
+<div class="space-y-5 mb-10">
+
+    <div class="rounded-xl shadow-md overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1522199710521-72d69614c702"
+             class="w-full h-40 object-cover">
+        <div class="p-4">
+            <h3 class="font-bold text-[#132473]">Keep Your Documents Safe</h3>
+            <p class="text-gray-600 text-sm mt-1">
+                Carry digital copies of passport, visa & IDs.
+            </p>
+        </div>
+    </div>
+
+    <div class="rounded-xl shadow-md overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1501117716987-c8e998e73c65"
+             class="w-full h-40 object-cover">
+        <div class="p-4">
+            <h3 class="font-bold text-[#132473]">Avoid Isolated Areas Late Night</h3>
+            <p class="text-gray-600 text-sm mt-1">
+                Prefer well-lit places & verified travel routes.
+            </p>
+        </div>
+    </div>
+
+</div>
+
+
+
+<!-- SOLO FEMALE TRAVELER TIPS -->
+<h2 class="text-lg font-semibold text-[#196561] mb-3">Solo Female Traveler Tips</h2>
+
+<div class="space-y-5 mb-10">
+
+    <div class="rounded-xl shadow-md overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1489515217757-5fd1be406fef"
+             class="w-full h-40 object-cover">
+        <div class="p-4">
+            <h3 class="font-bold text-[#132473]">Choose Verified Stays</h3>
+            <p class="text-gray-600 text-sm mt-1">
+                Select places with strong safety & cleanliness ratings.
+            </p>
+        </div>
+    </div>
+
+    <div class="rounded-xl shadow-md overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0"
+             class="w-full h-40 object-cover">
+        <div class="p-4">
+            <h3 class="font-bold text-[#132473]">Share Your Live Location</h3>
+            <p class="text-gray-600 text-sm mt-1">
+                Use WhatsApp or built-in SOS tools while commuting alone.
+            </p>
+        </div>
+    </div>
+
+</div>
+
+
+
+<!-- LOCAL SAFETY RATING -->
+<h2 class="text-lg font-semibold text-[#196561] mb-3">Local Safety Ratings</h2>
+
+<div class="space-y-6">
+
+    <!-- Safe Zone -->
+    <div class="rounded-xl shadow-lg overflow-hidden border border-green-300 bg-green-50">
+        <img src="https://images.unsplash.com/photo-1526779259212-939e64788e3c"
+             class="w-full h-48 object-cover">
+        <div class="p-4">
+            <div class="text-green-700 font-bold">SAFE • 8.9/10</div>
+            <h3 class="font-bold text-[#132473] text-lg mt-1">Old Town District</h3>
+            <p class="text-gray-600 text-sm mt-1">
+                Tourist-friendly • Low crime • Walkable streets
+            </p>
+        </div>
+    </div>
+
+    <!-- Caution Zone -->
+    <div class="rounded-xl shadow-lg overflow-hidden border border-yellow-300 bg-yellow-50">
+        <img src="https://images.unsplash.com/photo-1522199710521-72d69614c702"
+             class="w-full h-48 object-cover">
+        <div class="p-4">
+            <div class="text-yellow-700 font-bold">CAUTION • 6.3/10</div>
+            <h3 class="font-bold text-[#132473] text-lg mt-1">Lakeside Market Road</h3>
+            <p class="text-gray-600 text-sm mt-1">
+                Pickpocketing during rush hours • Avoid late-night visits
+            </p>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

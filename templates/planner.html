@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="p-6">
+
+    <h1 class="text-3xl font-bold text-[#132473] mb-4">AI Itinerary Planner</h1>
+
+    <div class="bg-white shadow rounded-xl p-5">
+
+        <!-- Destination -->
+        <label class="font-semibold">Destination</label>
+        <input id="p_destination" class="w-full border rounded p-2 mt-1">
+
+        <!-- Days -->
+        <label class="font-semibold mt-4">Number of Days</label>
+        <input id="p_days" type="number" class="w-full border rounded p-2 mt-1">
+
+        <!-- Traveler Type -->
+        <label class="font-semibold mt-4">Traveler Type</label>
+        <select id="p_type" class="w-full border rounded p-2 mt-1">
+            <option>Solo</option>
+            <option>Couple</option>
+            <option>Family</option>
+            <option>Friends</option>
+        </select>
+
+        <!-- Interests -->
+        <label class="font-semibold mt-4">Interests</label>
+        <textarea id="p_interests" class="w-full border rounded p-2 mt-1" placeholder="Beaches, culture, nightlife..."></textarea>
+
+        <button onclick="generateItinerary()"
+            class="w-full mt-5 bg-[#196561] text-white py-2 rounded-xl">
+            Generate AI Itinerary
+        </button>
+    </div>
+
+    <div class="mt-6">
+        <h2 class="text-2xl font-bold text-[#132473] mb-2">Your Itinerary</h2>
+        <div id="itinerary_output" class="bg-white shadow p-4 rounded-xl whitespace-pre-line"></div>
+    </div>
+
+</div>
+
+<script src="/static/js/planner.js"></script>
+
+{% endblock %}

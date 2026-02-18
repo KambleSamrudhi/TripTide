@@ -1,0 +1,29 @@
+[
+  {
+    "location": "Goa",
+    "risk": "Low",
+    "score": 8.5,
+    "safe_areas": ["Candolim", "Miramar", "Panaji"],
+    "avoid_areas": ["Late night isolated beaches"],
+    "tips": ["Stay near main roads", "Avoid late-night solo travel"],
+    "image": "https://images.unsplash.com/photo-1526779259212-939e64788e3c"
+  },
+  {
+    "location": "Kyoto",
+    "risk": "Very Low",
+    "score": 9.1,
+    "safe_areas": ["Gion", "Higashiyama"],
+    "avoid_areas": [],
+    "tips": ["Follow local cultural norms", "Avoid restricted temple zones"],
+    "image": "https://images.unsplash.com/photo-1500534623283-312aade485b7"
+  },
+  {
+    "location": "Bali",
+    "risk": "Medium",
+    "score": 7.2,
+    "safe_areas": ["Ubud", "Seminyak"],
+    "avoid_areas": ["Kuta late nights"],
+    "tips": ["Beware of rental scams", "Use verified taxis"],
+    "image": "https://images.unsplash.com/photo-1522199710521-72d69614c702"
+  }
+]

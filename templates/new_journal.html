@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1 class="text-2xl font-bold text-[#132473] mb-4">New Journal Entry</h1>
+
+<p class="text-gray-600 text-sm mb-6">
+    Add a new memory from your journey ✨
+</p>
+
+<div class="max-w-xl mx-auto bg-white shadow-lg rounded-xl p-6">
+
+    <label class="block font-semibold text-[#132473] mb-2">Memory Text</label>
+    <textarea id="entry_text" class="w-full border rounded-lg p-3"
+              rows="5" placeholder="Write your memory here..."></textarea>
+
+    <label class="block font-semibold text-[#132473] mt-4 mb-2">Image URL (optional)</label>
+    <input id="entry_image" class="w-full border rounded-lg p-3"
+           placeholder="Paste an image link" />
+
+    <button onclick="saveJournalEntry()"
+            class="w-full mt-6 py-3 rounded-xl bg-[#196561] text-white font-semibold text-lg shadow hover:bg-[#14504d]">
+        Save Entry
+    </button>
+
+</div>
+
+<script>
+function saveJournalEntry() {
+    const text = document.getElementById("entry_text").value.trim();
+    const image = document.getElementById("entry_image").value.trim();
+
+    if (!text) {
+        alert("Please write something before saving!");
+        return;
+    }
+
+    const payload = {
+        text: text,
+        image: image,
+        date: new Date().toLocaleDateString("en-IN")
+    };
+
+    fetch("/journal/save", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(payload)
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data.status === "ok") {
+            window.location.href = "/journal";
+        }
+    });
+}
+</script>
+
+{% endblock %}

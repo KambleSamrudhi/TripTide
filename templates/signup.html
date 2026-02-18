@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Signup | Triptide</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+
+<div class="bg-white shadow-xl p-8 rounded-2xl w-96 text-center">
+
+    <h1 class="text-3xl font-bold text-[#132473] mb-6">Create Account</h1>
+
+    <form action="/signup" method="POST" class="space-y-4">
+        <input name="name" type="text" placeholder="Name" required
+               class="w-full p-3 border rounded-xl"/>
+
+        <input name="email" type="email" placeholder="Email" required
+               class="w-full p-3 border rounded-xl"/>
+
+        <input name="password" type="password" placeholder="Password" required
+               class="w-full p-3 border rounded-xl"/>
+
+        <button class="w-full bg-[#132473] text-white py-3 rounded-xl shadow">
+            Create Account
+        </button>
+    </form>
+
+    <p class="mt-4 text-sm">
+        Already have an account?
+        <a href="/login" class="text-[#196561] font-semibold">Login</a>
+    </p>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="p-6">
+
+    <h1 class="text-3xl font-bold text-[#132473] mb-1">Discover India</h1>
+<div class="inline-flex items-center gap-2 rounded-full bg-green-100 px-3 py-1 text-xs font-semibold text-[#196561] mb-3">
+    <span>🇮🇳 India Deal:</span>
+    <span>Save up to 20% on domestic stays this month</span>
+</div>
+
+<div class="grid grid-cols-2 md:grid-cols-3 gap-5" id="india_grid"></div>
+
+<h1 class="text-3xl font-bold text-[#132473] mt-10 mb-1">International Destinations</h1>
+<div class="inline-flex items-center gap-2 rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold text-[#132473] mb-3">
+    <span>🌍 International Deal:</span>
+    <span>Flat ₹3,000 off on your first international booking</span>
+</div>
+
+<div class="grid grid-cols-2 md:grid-cols-3 gap-5 mb-10" id="intl_grid"></div>  
+
+<script>
+async function loadDestinations() {
+    const res = await fetch("/data/destinations.json");
+    const data = await res.json();
+
+    renderSection("india_grid", data.india);
+    renderSection("intl_grid", data.international);
+}
+
+function cleanImagePath(path) {
+    // Extract only filename (handles "static/images/Delhi.jpg")
+    return path.split("/").pop();
+}
+
+function renderSection(containerId, list) {
+    let html = "";
+
+    list.forEach(d => {
+        const img = cleanImagePath(d.image);
+
+        html += `
+        <a href="/destination/${d.id}" class="block">
+            <img src="/static/images/${img}" 
+                 onerror="this.src='/static/img/placeholder.jpg'"
+                 class="w-full h-40 object-cover rounded-xl shadow">
+            <p class="mt-2 font-semibold text-center">${d.name}</p>
+        </a>`;
+    });
+
+    document.getElementById(containerId).innerHTML = html;
+}
+
+loadDestinations();
+</script>
+<script src="/static/js/home.js"></script>
+<script src="{{ url_for('static', filename='js/ux_survey.js') }}"></script>
+
+{% endblock %}

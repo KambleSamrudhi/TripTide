@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="p-6">
+
+    <!-- IMAGE -->
+    <img src="{{ image }}" class="w-full h-60 object-cover rounded-xl shadow mb-4">
+
+    <h1 class="text-3xl font-bold text-[#132473] mb-2">{{ place.name }}</h1>
+    <p class="text-gray-600 mb-6">{{ place.country }}</p>
+
+  <!-- WEATHER -->
+<h2 class="text-xl font-bold mt-6">Weather</h2>
+<div id="weather_box" class="p-4 bg-white rounded-xl shadow mt-2">
+    Loading weather...
+</div>
+    <!-- SAFETY -->
+    <h2 class="text-xl font-semibold mt-6">Safety Score</h2>
+    <div id="safety_box" class="bg-white p-3 rounded-xl shadow mt-2"></div>
+
+    <!-- CULTURE -->
+    <h2 class="text-xl font-semibold mt-6">Culture</h2>
+    <div id="culture_box" class="bg-white p-3 rounded-xl shadow mt-2"></div>
+
+    <!-- PACKING -->
+    <h2 class="text-xl font-semibold mt-6">Packing Guide</h2>
+    <div id="packing_box" class="bg-white p-3 rounded-xl shadow mt-2"></div>
+
+    <!-- EXPERIENCES -->
+    <h2 class="text-xl font-semibold mt-6">Experiences</h2>
+    <div id="experiences_box" class="bg-white p-3 rounded-xl shadow mt-2"></div>
+
+    <!-- STAYS -->
+    <!--<h2 class="text-xl font-semibold mt-6">Where to Stay</h2>
+    <div id="stays_grid" class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3"></div>-->
+
+
+<!-- DISTANCE -->
+<!--<h2 class="text-xl font-bold mt-6">Distance</h2>
+<p id="distance_text" class="mt-2 text-gray-700">Calculating...</p>-->
+
+    <!-- GOOGLE MAP IFRAME -->
+    <h2 class="text-xl font-semibold mt-6">Location Map</h2>
+    <iframe
+        id="map_iframe"
+        style="width:100%; height:300px; border:0; border-radius:12px; margin-top:12px;"
+        loading="lazy"
+        allowfullscreen
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+
+</div>
+
+<!-- Destination page JS -->
+<script src="/static/js/destination.js?v=3"></script>
+
+{% endblock %}
