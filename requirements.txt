@@ -19,3 +19,7 @@ bcrypt
 flask_bcrypt
 flask_mail
 flask_admin
+Flask
+
+pandas
+openpyxl
