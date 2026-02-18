@@ -5,3 +5,17 @@ flask_login
 flask_session
 gunicorn
 geopy
+requests
+python-dotenv
+psycopg2-binary
+pytest
+pytest-flask
+pytest-cov
+coverage
+flask-cors
+flask_wtf
+email-validator
+bcrypt
+flask_bcrypt
+flask_mail
+flask_admin
